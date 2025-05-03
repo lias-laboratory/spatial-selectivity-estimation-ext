@@ -1,0 +1,65 @@
+The statistical analysis was conducted for 6 populations with 21 paired samples.
+The family-wise significance level of the tests is alpha=0.050.
+We rejected the null hypothesis that the population is normal for the populations KNN (p=0.001), XGB (p=0.000), RTree (p=0.000), MLP (p=0.001), and Histogram (p=0.000). Therefore, we assume that not all populations are normal.
+Because we have more than two populations and the populations and some of them are not normal, we use the non-parametric Friedman test as omnibus test to determine if there are any significant differences between the median values of the populations. We use the post-hoc Nemenyi test to infer which differences are significant. We report the median (MD), the median absolute deviation (MAD) and the mean rank (MR) among all populations over the samples. Differences between populations are significant, if the difference of the mean rank is greater than the critical distance CD=1.645 of the Nemenyi test.
+We reject the null hypothesis (p=0.000) of the Friedman test that there is no difference in the central tendency of the populations KNN (MD=3.315+-47.206, MAD=1.159, MR=2.476), XGB (MD=9.563+-35.696, MAD=7.792, MR=2.857), RTree (MD=8.431+-46.281, MAD=4.662, MR=2.905), MLP (MD=14.788+-39.597, MAD=10.720, MR=3.429), RF (MD=36.074+-43.165, MAD=10.858, MR=4.000), and Histogram (MD=49.189+-2074.707, MAD=11.371, MR=5.333). Therefore, we assume that there is a statistically significant difference between the median values of the populations.
+Based on the post-hoc Nemenyi test, we assume that there are no significant differences within the following groups: KNN, XGB, RTree, MLP, and RF; RF and Histogram. All other differences are significant.
+\documentclass{article}
+
+\usepackage{graphicx}
+\usepackage{booktabs}
+
+\begin{document}
+
+\section{Results}
+\label{sec:results}
+
+The statistical analysis was conducted for 6 populations with 21 paired samples.
+The family-wise significance level of the tests $\alpha$=0.050.
+We rejected the null hypothesis that the population is normal for the populations KNN (p=0.001), XGB (p=0.000), RTree (p=0.000), MLP (p=0.001), and Histogram (p=0.000). Therefore, we assume that not all populations are normal.
+Because we have more than two populations and the populations and some of them are not normal, we use the non-parametric Friedman test as omnibus test to determine if there are any significant differences between the median values of the populations. We use the post-hoc Nemenyi test to infer which differences are significant. We report the median (MD), the median absolute deviation (MAD) and the mean rank (MR) among all populations over the samples. Differences between populations are significant, if the difference of the mean rank is greater than the critical distance CD=1.645 of the Nemenyi test.
+We reject the null hypothesis (p=0.000) of the Friedman test that there is no difference in the central tendency of the populations KNN (MD=3.315$\pm$47.206, MAD=1.159, MR=2.476), XGB (MD=9.563$\pm$35.696, MAD=7.792, MR=2.857), RTree (MD=8.431$\pm$46.281, MAD=4.662, MR=2.905), MLP (MD=14.788$\pm$39.597, MAD=10.720, MR=3.429), RF (MD=36.074$\pm$43.165, MAD=10.858, MR=4.000), and Histogram (MD=49.189$\pm$2074.707, MAD=11.371, MR=5.333). Therefore, we assume that there is a statistically significant difference between the median values of the populations.
+Based on the post-hoc Nemenyi test, we assume that there are no significant differences within the following groups: KNN, XGB, RTree, MLP, and RF; RF and Histogram. All other differences are significant.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lrrllll}
+\toprule
+ & MR & MED & MAD & CI & $\gamma$ & Magnitude \\
+\midrule
+KNN & 2.476 & 3.315 & 1.159 & [2.156, 96.569] & 0.000 & negligible \\
+XGB & 2.857 & 9.563 & 7.792 & [2.166, 73.557] & -0.757 & medium \\
+RTree & 2.905 & 8.431 & 4.662 & [3.769, 96.331] & -1.016 & large \\
+MLP & 3.429 & 14.788 & 10.720 & [3.249, 82.444] & -1.015 & large \\
+RF & 4.000 & 36.074 & 10.858 & [1.770, 88.100] & -2.862 & large \\
+Histogram & 5.333 & 49.189 & 11.371 & [37.818, 4187.233] & -3.829 & large \\
+\bottomrule
+\end{tabular}
+\caption{Summary of populations}
+\label{tbl:stat_results}
+\end{table}
+
+\begin{figure}[h]
+\includegraphics[]{stat_results.pdf}
+\caption{CD diagram to visualize the results of the Nemenyi post-hoc test. The horizontal lines indicate that differences are not significant.}
+\label{fig:stats_fig}
+\end{figure}
+
+\end{document}
+\begin{table}[h]
+\centering
+\begin{tabular}{lrrllll}
+\toprule
+ & MR & MED & MAD & CI & $\gamma$ & Magnitude \\
+\midrule
+KNN & 2.476 & 3.315 & 1.159 & [2.156, 96.569] & 0.000 & negligible \\
+XGB & 2.857 & 9.563 & 7.792 & [2.166, 73.557] & -0.757 & medium \\
+RTree & 2.905 & 8.431 & 4.662 & [3.769, 96.331] & -1.016 & large \\
+MLP & 3.429 & 14.788 & 10.720 & [3.249, 82.444] & -1.015 & large \\
+RF & 4.000 & 36.074 & 10.858 & [1.770, 88.100] & -2.862 & large \\
+Histogram & 5.333 & 49.189 & 11.371 & [37.818, 4187.233] & -3.829 & large \\
+\bottomrule
+\end{tabular}
+\caption{Summary of populations}
+\label{tbl:stat_results}
+\end{table}

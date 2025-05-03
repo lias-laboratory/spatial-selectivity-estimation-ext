@@ -1,0 +1,57 @@
+The statistical analysis was conducted for 6 populations with 7 paired samples.
+The family-wise significance level of the tests is alpha=0.050.
+We rejected the null hypothesis that the population is normal for the populations XGB (p=0.001) and RF (p=0.004). Therefore, we assume that not all populations are normal.
+Because we have more than two populations and the populations and some of them are not normal, we use the non-parametric Friedman test as omnibus test to determine if there are any significant differences between the median values of the populations. We use the post-hoc Nemenyi test to infer which differences are significant. We report the median (MD), the median absolute deviation (MAD) and the mean rank (MR) among all populations over the samples. Differences between populations are significant, if the difference of the mean rank is greater than the critical distance CD=2.850 of the Nemenyi test.
+We failed to reject the null hypothesis (p=0.296) of the Friedman test that there is no difference in the central tendency of the populations KNN (MD=1.979+-49.019, MAD=0.825, MR=2.429), RTree (MD=4.869+-5.707, MAD=2.512, MR=3.143), MLP (MD=4.362+-7.407, MAD=0.713, MR=3.143), XGB (MD=5.007+-43.810, MAD=2.421, MR=3.714), Histogram (MD=35.253+-24.112, MAD=11.140, MR=3.857), and RF (MD=56.735+-38.670, MAD=19.860, MR=4.714). Therefore, we assume that there is no statistically significant difference between the median values of the populations.
+\documentclass{article}
+
+\usepackage{graphicx}
+\usepackage{booktabs}
+
+\begin{document}
+
+\section{Results}
+\label{sec:results}
+
+The statistical analysis was conducted for 6 populations with 7 paired samples.
+The family-wise significance level of the tests $\alpha$=0.050.
+We rejected the null hypothesis that the population is normal for the populations XGB (p=0.001) and RF (p=0.004). Therefore, we assume that not all populations are normal.
+Because we have more than two populations and the populations and some of them are not normal, we use the non-parametric Friedman test as omnibus test to determine if there are any significant differences between the median values of the populations. We use the post-hoc Nemenyi test to infer which differences are significant. We report the median (MD), the median absolute deviation (MAD) and the mean rank (MR) among all populations over the samples. Differences between populations are significant, if the difference of the mean rank is greater than the critical distance CD=2.850 of the Nemenyi test.
+We failed to reject the null hypothesis (p=0.296) of the Friedman test that there is no difference in the central tendency of the populations KNN (MD=1.979$\pm$49.019, MAD=0.825, MR=2.429), RTree (MD=4.869$\pm$5.707, MAD=2.512, MR=3.143), MLP (MD=4.362$\pm$7.407, MAD=0.713, MR=3.143), XGB (MD=5.007$\pm$43.810, MAD=2.421, MR=3.714), Histogram (MD=35.253$\pm$24.112, MAD=11.140, MR=3.857), and RF (MD=56.735$\pm$38.670, MAD=19.860, MR=4.714). Therefore, we assume that there is no statistically significant difference between the median values of the populations.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lrrll}
+\toprule
+ & MR & MED & MAD & CI \\
+\midrule
+KNN & 2.429 & 1.979 & 0.825 & [1.154, 99.192] \\
+RTree & 3.143 & 4.869 & 2.512 & [2.357, 13.772] \\
+MLP & 3.143 & 4.362 & 0.713 & [1.127, 15.941] \\
+XGB & 3.714 & 5.007 & 2.421 & [2.586, 90.207] \\
+Histogram & 3.857 & 35.253 & 11.140 & [1.721, 49.944] \\
+RF & 4.714 & 56.735 & 19.860 & [1.126, 78.465] \\
+\bottomrule
+\end{tabular}
+\caption{Summary of populations}
+\label{tbl:stat_results}
+\end{table}
+
+\end{document}
+\begin{table}[h]
+\centering
+\begin{tabular}{lrrll}
+\toprule
+ & MR & MED & MAD & CI \\
+\midrule
+KNN & 2.429 & 1.979 & 0.825 & [1.154, 99.192] \\
+RTree & 3.143 & 4.869 & 2.512 & [2.357, 13.772] \\
+MLP & 3.143 & 4.362 & 0.713 & [1.127, 15.941] \\
+XGB & 3.714 & 5.007 & 2.421 & [2.586, 90.207] \\
+Histogram & 3.857 & 35.253 & 11.140 & [1.721, 49.944] \\
+RF & 4.714 & 56.735 & 19.860 & [1.126, 78.465] \\
+\bottomrule
+\end{tabular}
+\caption{Summary of populations}
+\label{tbl:stat_results}
+\end{table}

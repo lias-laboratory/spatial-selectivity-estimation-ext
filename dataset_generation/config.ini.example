@@ -1,0 +1,11 @@
+[database]
+dbname = spatial_db
+user = your_username
+password = your_password
+host = localhost
+port = 5432
+
+[settings]
+directory = /path/to/your/nt/files
+batch_size = 10000
+statistics_output_file = spatial_statistics.csv

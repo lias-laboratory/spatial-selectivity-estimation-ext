@@ -1,0 +1,54 @@
+\begin{table}
+\centering
+\caption{Best Models by Metric for Each Dataset and Filter Type}
+\label{tab:best-models-by-dataset}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{l|r|l|l|l|l|l|l|l|l|l|l|l|l}
+\toprule
+\multirow{2}{*}{Dataset} & \multirow{2}{*}{Objects} & \multicolumn{4}{c|}{Intersect Filter} & \multicolumn{4}{c|}{Contain Filter} & \multicolumn{4}{c}{Distance Filter} \\
+\cmidrule(lr){3-6} \cmidrule(lr){7-10} \cmidrule(lr){11-14}
+ & & Size & Time & MAE & MAPE & Size & Time & MAE & MAPE & Size & Time & MAE & MAPE \\
+\midrule
+zcta5 & 33,144 & Histogram (0.02MB) & RTree (8.2μs) & RF (98.3) & Histogram (31\%) & Histogram (0.02MB) & RTree (9.6μs) & RF (105) & XGB (54\%) & Histogram (0.02MB) & NN (22μs) & XGB (441) & KNN (32\%) \\
+aerowaythingnodesorted & 79,229 & Histogram (0.06MB) & RTree (8.7μs) & Histogram (169) & Histogram (172\%) & Histogram (0.06MB) & RTree (9.7μs) & Histogram (169) & Histogram (172\%) & Histogram (0.06MB) & XGB (16μs) & KNN (585) & Histogram (59\%) \\
+craftwaysorted & 109,121 & NN (0.07MB) & RTree (9.4μs) & XGB (174) & Histogram (50\%) & NN (0.07MB) & RTree (10μs) & XGB (173) & Histogram (50\%) & NN (0.07MB) & NN (16μs) & KNN (1345) & Histogram (60\%) \\
+arealm & 129,179 & NN (0.07MB) & RTree (8.6μs) & XGB (159) & Histogram (35\%) & NN (0.07MB) & RTree (9.1μs) & XGB (160) & Histogram (30\%) & NN (0.07MB) & XGB (13μs) & XGB (1300) & KNN (46\%) \\
+emergencythingwaysorted & 807,582 & NN (0.25MB) & XGB (8.1μs) & RF (468) & Histogram (39\%) & NN (0.25MB) & XGB (9.6μs) & RF (469) & Histogram (39\%) & NN (0.25MB) & XGB (7.0μs) & KNN (5030) & Histogram (47\%) \\
+historicthingwaysorted & 1,792,201 & NN (0.23MB) & XGB (7.1μs) & Histogram (776) & Histogram (24\%) & NN (0.24MB) & XGB (8.1μs) & Histogram (777) & Histogram (25\%) & NN (0.25MB) & XGB (10μs) & KNN (9489) & Histogram (41\%) \\
+aerowaythingwaysorted & 1,841,835 & NN (0.25MB) & XGB (6.8μs) & Histogram (800) & Histogram (48\%) & NN (0.25MB) & XGB (9.7μs) & Histogram (801) & Histogram (57\%) & NN (0.26MB) & XGB (8.7μs) & KNN (5792) & Histogram (40\%) \\
+areawater & 2,292,766 & NN (0.24MB) & XGB (6.2μs) & RF (840) & RF (18\%) & NN (0.25MB) & RF (8.0μs) & RF (838) & RF (13\%) & NN (0.26MB) & XGB (7.5μs) & KNN (12.8K) & Histogram (40\%) \\
+yago2 & 4,494,722 & NN (0.22MB) & XGB (6.6μs) & RF (2415) & RF (3.1\%) & NN (0.24MB) & XGB (8.8μs) & RF (2305) & RF (88\%) & NN (0.24MB) & XGB (5.6μs) & KNN (19.3K) & KNN (406\%) \\
+cyclewaythingwaysorted & 5,335,324 & NN (0.24MB) & XGB (5.9μs) & RF (1630) & RF (35\%) & NN (0.24MB) & XGB (7.4μs) & RF (1629) & RF (36\%) & NN (0.24MB) & XGB (11μs) & KNN (15.8K) & Histogram (42\%) \\
+powerthingnodesorted & 10,512,581 & NN (0.23MB) & XGB (5.8μs) & RF (3626) & RF (71\%) & NN (0.23MB) & XGB (6.7μs) & RF (3626) & RF (71\%) & NN (0.24MB) & XGB (8.3μs) & KNN (19.0K) & Histogram (38\%) \\
+powerthingwaysorted & 13,586,454 & NN (0.23MB) & XGB (5.8μs) & RF (4037) & RF (43\%) & NN (0.23MB) & XGB (8.9μs) & RF (4034) & RF (34\%) & NN (0.24MB) & XGB (8.5μs) & KNN (23.8K) & KNN (30\%) \\
+barrierthingwaysorted & 22,908,363 & NN (0.24MB) & XGB (2.8μs) & RF (4565) & RF (36\%) & NN (0.24MB) & XGB (6.2μs) & RF (4566) & RF (37\%) & NN (0.25MB) & XGB (6.6μs) & KNN (50.3K) & Histogram (38\%) \\
+leisurewaysorted & 29,382,860 & NN (0.24MB) & XGB (5.7μs) & RF (5875) & RF (37\%) & NN (0.24MB) & XGB (8.1μs) & RF (5872) & RF (36\%) & NN (0.24MB) & XGB (7.3μs) & KNN (53.5K) & KNN (36\%) \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\begin{table}
+\centering
+\caption{Spatial Object Types by Dataset}
+\label{tab:spatial-object-types}
+\begin{tabular}{l|l}
+\toprule
+Dataset & Spatial Object Types \\
+\midrule
+zcta5 & ST\_Polygon, ST\_MultiPolygon \\
+aerowaythingnodesorted & ST\_Point \\
+craftwaysorted & ST\_Point, ST\_LineString \\
+arealm & ST\_Polygon, ST\_MultiPolygon \\
+emergencythingwaysorted & ST\_Point, ST\_LineString \\
+historicthingwaysorted & ST\_LineString, ST\_Point \\
+aerowaythingwaysorted & ST\_LineString, ST\_Point \\
+areawater & ST\_Polygon, ST\_MultiPolygon \\
+yago2 & ST\_Point, ST\_MultiPoint \\
+cyclewaythingwaysorted & ST\_LineString, ST\_Point \\
+powerthingnodesorted & ST\_Point \\
+powerthingwaysorted & ST\_LineString, ST\_Point \\
+barrierthingwaysorted & ST\_LineString, ST\_Point \\
+leisurewaysorted & ST\_LineString, ST\_Point \\
+\bottomrule
+\end{tabular}
+\end{table}

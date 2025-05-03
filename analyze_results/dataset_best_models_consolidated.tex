@@ -1,0 +1,28 @@
+\begin{table}
+\centering
+\caption{Dataset Characteristics and Best Models by Metric}
+\label{tab:dataset-best-models}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{l|r|l|ccc|ccc|ccc}
+\toprule
+\multirow{2}{*}{Dataset} & \multirow{2}{*}{Objects} & \multirow{2}{*}{Geometry Types} & \multicolumn{3}{c|}{Best Size Model} & \multicolumn{3}{c|}{Best Time Model} & \multicolumn{3}{c}{Best Accuracy Model} \\
+\cmidrule(lr){4-6} \cmidrule(lr){7-9} \cmidrule(lr){10-12}
+ & & & Int & Con & Dist & Int & Con & Dist & Int & Con & Dist \\
+\midrule
+zcta5 & 33,144 & Polygon, MultiPolygon & DT & DT & DT & DT & DT & DT & Histogram & RF & KNN \\
+aerowaythingnodesorted & 79,229 & Point & DT & DT & DT & DT & DT & DT & Histogram & Histogram & KNN \\
+craftwaysorted & 109,121 & Point, LineString & DT & DT & DT & DT & DT & DT & Histogram & Histogram & KNN \\
+arealm & 129,179 & Polygon, MultiPolygon & DT & DT & DT & DT & DT & DT & XGB & Histogram & KNN \\
+emergencythingwaysorted & 807,582 & Point, LineString & DT & DT & DT & DT & DT & DT & Histogram & Histogram & KNN \\
+historicthingwaysorted & 1,792,201 & LineString, Point & DT & DT & DT & DT & DT & DT & Histogram & Histogram & KNN \\
+aerowaythingwaysorted & 1,841,835 & LineString, Point & DT & DT & DT & DT & DT & DT & Histogram & Histogram & RF \\
+areawater & 2,292,766 & Polygon, MultiPolygon & DT & DT & DT & DT & DT & DT & RF & RF & KNN \\
+yago2 & 4,494,722 & Point, MultiPoint & DT & DT & DT & DT & DT & DT & RF & RF & KNN \\
+cyclewaythingwaysorted & 5,335,324 & LineString, Point & DT & DT & DT & DT & DT & DT & RF & RF & KNN \\
+powerthingnodesorted & 10,512,581 & Point & DT & DT & DT & DT & DT & DT & RF & RF & KNN \\
+powerthingwaysorted & 13,586,454 & LineString, Point & DT & DT & DT & DT & DT & DT & RF & RF & KNN \\
+barrierthingwaysorted & 22,908,363 & LineString, Point & DT & DT & DT & DT & DT & DT & RF & RF & KNN \\
+leisurewaysorted & 29,382,860 & LineString, Point & DT & DT & DT & DT & DT & DT & RF & RF & KNN \\
+\bottomrule
+\end{tabular}}
+\end{table}
