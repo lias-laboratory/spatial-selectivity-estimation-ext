@@ -21,7 +21,7 @@ To facilitate reproduction of our results without requiring lengthy retraining o
 The work in this repository is licensed under the MIT License. Please refer to the [LICENSE](https://github.com/lias-laboratory/spatial-selectivity-estimation-ext/blob/main/LICENSE) file for more details.
 
 ## Contributors
-1. Nadir GUERMOUDI (LIAS/University of Poitiers & LRIT/University of Tlemcen)
+1. Nadir GUERMOUDI (LIAS/ISAE-ENSMA & LRIT/University of Tlemcen)
 2. Houcine MATALLAH (LRIT/University of Tlemcen)
 3. Amin MESMOUDI (LIAS/University of Poitiers)
 4. Seif-Eddine BENKABOU (LIAS/University of Poitiers)
