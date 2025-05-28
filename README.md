@@ -13,7 +13,6 @@ The repository is organized as follows:
 
 ## Additional Resources
 To facilitate reproduction of our results without requiring lengthy retraining of models, we provide a [downloadable zip](https://filesender.renater.fr/?s=download&token=cd9e6450-0eb1-4d85-b407-10e6302ddbbd) file containing:
-[comment]: <> (https://www.lias-lab.fr/ftppublic/research/spatial-selectivity-estimation-ext)
 
 - All 14 spatial datasets used in our experiments
 - Pre-trained models for each filter type, including traditional approaches
