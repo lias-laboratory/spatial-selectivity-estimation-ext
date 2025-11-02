@@ -12,10 +12,14 @@ The repository is organized as follows:
 - traditional_methods: Implementation of baseline approaches (RTree and Histogram-based estimation) used for comparison
 
 ## Additional Resources
-To facilitate reproduction of our results without requiring lengthy retraining of models, we provide a [downloadable zip](https://filesender.renater.fr/?s=download&token=cd9e6450-0eb1-4d85-b407-10e6302ddbbd) file containing:
+To facilitate reproduction of our results without requiring lengthy retraining of models, we provide the following direct downloads:
 
-- All 14 spatial datasets used in our experiments
-- Pre-trained models for each filter type, including traditional approaches
+- [datasets_contains.zip](https://forge.lias-lab.fr/datasets/spatial-selectivity-estimation-ext/datasets_contains.zip) (2.47 GB): contains feedback on the 14 datasets for the `CONTAINS` spatial filter.
+- [datasets_distance.zip](https://forge.lias-lab.fr/datasets/spatial-selectivity-estimation-ext/datasets_distance.zip) (1.28 GB): contains feedback on the 14 datasets for the distance-based spatial filter.
+- [datasets_intersects.zip](https://forge.lias-lab.fr/datasets/spatial-selectivity-estimation-ext/datasets_intersects.zip) (2.47 GB): contains feedback on the 14 datasets for the `INTERSECTS` spatial filter.
+- [spatial_dump_file.dump](https://forge.lias-lab.fr/datasets/spatial-selectivity-estimation-ext/spatial_dump_file.dump) (6.62 GB): PostgreSQL dump of all 14 spatial databases used in our experiments.
+- [traditional_methods.zip](https://forge.lias-lab.fr/datasets/spatial-selectivity-estimation-ext/traditional_methods.zip) (3.81 GB): build artifacts, data, and configurations for the histogram- and RTree-based baseline estimators.
+- [learned_models.zip](https://forge.lias-lab.fr/datasets/spatial-selectivity-estimation-ext/learned_models.zip) (45.46 GB): saved learned models to shorten setup time and ensure reproducibility of the reported results.
 
 # License
 The work in this repository is licensed under the MIT License. Please refer to the [LICENSE](https://github.com/lias-laboratory/spatial-selectivity-estimation-ext/blob/main/LICENSE) file for more details.
